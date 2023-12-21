@@ -1,9 +1,12 @@
 package p02;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Main02 {
@@ -51,5 +54,36 @@ public class Main02 {
 		for(char c : charSet) {
 			System.out.println(c);
 		}
+		
+		// 便利なクラスやインターフェースについて
+		
+//		// 自分で作成したクラス型をソートする
+//		// Comparableインターフェースを実装し
+//		// compareTo(Object o) メソッドをオーバーライドする
+		
+//		例)
+//		int serialNo;
+//		public int compareTo(Object o) {
+//			Hero h = (Hero)o;
+//			if(this.serialNo < h.serialNo) {
+//				return -1;
+//			}
+//			if(this.serialNo > h.serialNo) {
+//				return -1;
+//			}
+//			return 0;
+//		}
+		
+		System.out.println("------------------------------");
+		String[] strs = {"い","え","あ","お","う"};
+		List<String> exampleList = new ArrayList<>(Arrays.asList(strs));
+		
+		// 自然順序でソートする（Collectionsクラスのsortメソッド）
+		Collections.sort(exampleList);
+		
+		for(String str : exampleList) {
+			System.out.println(str);
+		}
+		
 	}
 }
